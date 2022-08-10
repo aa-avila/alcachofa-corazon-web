@@ -1,4 +1,4 @@
-body {
+/* body {
   height: 100vh;
   margin: 0;
   background: #87084c;
@@ -7,4 +7,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+} */
+
+/* $theme-colors: (
+  'primary': #87084c,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark
+); */
+
+.btn {
+  height: 3rem;
 }
