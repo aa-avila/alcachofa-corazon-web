@@ -20,6 +20,14 @@
   'dark': $dark
 ); */
 
+header {
+  background-color: #a01040;
+}
+
+footer {
+  background-color: #f9c4d6;
+}
 .btn {
+  background-color: #0ea399;
   height: 3rem;
 }
