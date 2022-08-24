@@ -1,40 +1,32 @@
-/* body {
+body {
   height: 100vh;
   margin: 0;
-  background: #87084c;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} */
-
-/* $theme-colors: (
-  'primary': #87084c,
-  'secondary': $secondary,
-  'success': $success,
-  'info': $info,
-  'warning': $warning,
-  'danger': $danger,
-  'light': $light,
-  'dark': $dark
-); */
-
-header {
-  background-color: #a01040;
+  box-sizing: border-box;
 }
 
-footer {
-  background-color: #f9c4d6;
+.main-bg {
+  background-color: #003c77;
+  background-image: url(/public/img/bg-3.png);
+  background-size: auto 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.btn-container {
+  /* background-color: bisque; */
+  min-width: 10rem;
+  max-width: 30rem;
+  padding: 10px;
 }
 
 .btn {
   background-color: #0ea399;
-  height: 3rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-/* 
-footer {
-  background-color: #2a6aa8;
-}
- */
