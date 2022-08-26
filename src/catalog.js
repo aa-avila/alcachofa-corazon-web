@@ -9,6 +9,36 @@ const fetchGet = async (url) => {
 };
 
 async function run() {
-  console.log(await fetchGet(catalogImgUrl));
+  const catalogImgJson = await fetchGet(catalogImgUrl);
+  console.log(catalogImgJson);
+
+  //   document.getElementById(
+  //     'imgTest'
+  //   ).innerHTML = `<img id="imgTest" src="${catalogImgJson[2]}" class="card-img-top" alt="...">`;
+
+  const htmlFirstSlide = `
+    <div class="carousel-item active">
+      <img src="${catalogImgJson[1]}" class="d-block w-100" alt="...">
+    </div>`;
+
+  const makeSlide = (imgUrl) => {
+    const html = `
+    <div class="carousel-item">
+      <img src="${imgUrl}" class="d-block w-100" alt="...">
+    </div>`;
+    return html;
+  };
+
+  catalogImgJson.splice(0, 2);
+  console.log(catalogImgJson);
+
+  let htmlSlides = '';
+
+  catalogImgJson.forEach((url) => {
+    htmlSlides = htmlSlides + ' ' + makeSlide(url);
+  });
+
+  document.getElementById('carousel-catalog').innerHTML =
+    htmlFirstSlide + ' ' + htmlSlides;
 }
 run();
