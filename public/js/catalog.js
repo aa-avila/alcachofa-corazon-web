@@ -1,11 +1,12 @@
 console.log('starting catalog.js');
 
 import { fetchGet } from '/public/js/utils/fetchData.js';
-import { CATALOG_IMG_URL } from '/public/js/utils/constants.js';
-import { CATALOG_PDF_TEST_URL } from '/public/js/utils/constants.js';
+import { fbUrls } from '/public/js/utils/constants.js';
+const { CATALOG_IMG, CATALOG_PDF_TEST } = fbUrls;
 
 const makeCarousel = async () => {
-  const catalogImgJson = await fetchGet(CATALOG_IMG_URL);
+  const catalogImgJson = await fetchGet(CATALOG_IMG);
+  console.log(catalogImgJson);
 
   const htmlFirstSlide = `
     <div class="carousel-item active">
@@ -34,7 +35,7 @@ const makeCarousel = async () => {
 
 const setupDwnPdfButton = async () => {
   const button = document.getElementById('downloadBtn');
-  const catalogPdfUrl = await fetchGet(CATALOG_PDF_TEST_URL);
+  const catalogPdfUrl = await fetchGet(CATALOG_PDF_TEST);
   button.href = catalogPdfUrl;
   button.classList.remove('disabled');
 };

@@ -1,7 +1,25 @@
-const CATALOG_IMG_URL =
-  'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/img-pages.json';
+const fbUrls = {
+  CATALOG_IMG:
+    'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/img-pages.json',
 
-const CATALOG_PDF_TEST_URL =
-  'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/pdf/test.json';
+  CATALOG_PDF_TEST:
+    'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/pdf/test.json',
 
-export { CATALOG_IMG_URL, CATALOG_PDF_TEST_URL };
+  WEB_PARAMS:
+    'https://alcachofa-corazon-default-rtdb.firebaseio.com/web-page/params.json'
+};
+
+const routes = {
+  HOME: '/index.html',
+  CATALOG: '/public/pages/catalog.html',
+  ABOUT: '/public/pages/about.html'
+};
+
+const socialLinks = {
+  WHATSAPP: 'https://wa.me/5493513092821',
+  INSTAGRAM: '',
+  FACEBOOK: '',
+  EMAIL: ''
+};
+
+export { fbUrls, routes, socialLinks };
