@@ -17,9 +17,8 @@ const routes = {
 
 const socialLinks = {
   WHATSAPP: 'https://wa.me/5493513092821',
-  INSTAGRAM: '',
-  FACEBOOK: '',
-  EMAIL: ''
+  INSTAGRAM: 'https://www.instagram.com/alcachofa.corazon/',
+  EMAIL: 'alcachofa.corazon@gmail.com'
 };
 
 export { fbUrls, routes, socialLinks };
