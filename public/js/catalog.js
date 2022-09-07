@@ -1,12 +1,16 @@
 console.log('starting catalog.js');
+import { logEvent, analytics } from './firebase/config.js';
+import { events } from './firebase/events.js';
+import { routes } from './utils/constants.js';
+import { getWebParams } from './utils/webParams.js';
+import { fetchGet } from './utils/fetchData.js';
+import { fbUrls } from './utils/constants.js';
 
-import { fetchGet } from '/public/js/utils/fetchData.js';
-import { fbUrls } from '/public/js/utils/constants.js';
 const { CATALOG_IMG, CATALOG_PDF_TEST } = fbUrls;
+const pdfDownloadBtn = document.getElementById('downloadBtn');
 
 const makeCarousel = async () => {
   const catalogImgJson = await fetchGet(CATALOG_IMG);
-  console.log(catalogImgJson);
 
   const htmlFirstSlide = `
     <div class="carousel-item active">
@@ -34,17 +38,30 @@ const makeCarousel = async () => {
 };
 
 const setupDwnPdfButton = async () => {
-  const button = document.getElementById('downloadBtn');
   const catalogPdfUrl = await fetchGet(CATALOG_PDF_TEST);
-  button.href = catalogPdfUrl;
-  button.classList.remove('disabled');
+  pdfDownloadBtn.href = catalogPdfUrl;
+  pdfDownloadBtn.classList.remove('disabled');
+};
+
+const setupAnalytics = async () => {
+  const webParams = await getWebParams();
+  if (!webParams.analytics_enabled) {
+    console.log('analytics disabled');
+    return;
+  }
+
+  console.log('analytics enabled');
+  logEvent(analytics, events.CATALOG_VIEW, { timestamp: new Date() });
+
+  pdfDownloadBtn.addEventListener('click', () => {
+    logEvent(analytics, events.CATALOG_BTN_DOWNLOAD_CLICKED, {
+      timestamp: new Date()
+    });
+  });
 };
 
 /************************ */
 
-const run = async () => {
-  makeCarousel();
-  setupDwnPdfButton();
-};
-
-run();
+makeCarousel().catch((err) => console.log(err));
+setupDwnPdfButton().catch((err) => console.log(err));
+setupAnalytics().catch((err) => console.log(err));

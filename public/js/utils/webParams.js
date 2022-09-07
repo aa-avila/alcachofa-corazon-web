@@ -6,6 +6,4 @@ const getWebParams = async () => {
   return await fetchGet(WEB_PARAMS);
 };
 
-const webParams = await getWebParams();
-
-export { webParams };
+export { getWebParams };
