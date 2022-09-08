@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,27 +19,41 @@
 </head>
 
 <body>
-    <div class="container d-flex flex-column justify-content-between  h-100 p-0 bg-primary">
-        <div class="container-fluid bg-secondary">
-            <p>algo</p>
+    <div id="bg-main-container"
+        class="container d-flex flex-column justify-content-between align-items-center h-100 p-0">
+        <div id="bg-top-container" class="container-fluid d-flex justify-content-between p-0">
+            <div>
+                <img id="bg-img-1" src="./public/img/bg-1.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-2" src="./public/img/bg-2.png" alt="">
+            </div>
         </div>
 
-        <div id="btn-container" class="d-flex flex-column justify-content-center">
-            <button id="btn-catalog" type="button" class="btn text-white">Catálogo</button>
-            <button id="btn-wp" type="button" class="btn text-white">WhatsApp</button>
+        <div id="btn-container" class="container-fluid d-flex flex-column justify-content-center">
+            <button id="btn-catalog" type="button" class="btn text-white fs-4">
+                Catálogo
+            </button>
+            <button id="btn-wp" type="button" class="btn text-white fs-4">
+                WhatsApp
+            </button>
+            <button id="btn-about" type="button" class="btn text-white fs-4">
+                Acerca de Alcachofa...
+            </button>
         </div>
 
-        <div class="container-fluid bg-secondary">
-            <p>algo</p>
+        <div id="bg-bottom-container" class="container-fluid d-flex justify-content-between align-items-end p-0">
+            <div>
+                <img id="bg-img-3" src="./public/img/bg-3.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-logo" src="./public/img/bg-logo.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-4" src="./public/img/bg-4.png" alt="">
+            </div>
         </div>
     </div>
 </body>
-
-<!-- <body class="d-flex flex-column h-100 main-bg">
-    <div class="d-flex flex-column align-items-center mx-auto my-auto btn-container">
-        <button id="btn-catalog" type="button" class="btn text-white">Catálogo</button>
-        <button id="btn-wp" type="button" class="btn text-white">WhatsApp</button>
-    </div>
-</body> -->
 
 </html>
