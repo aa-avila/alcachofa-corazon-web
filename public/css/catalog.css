@@ -1,6 +1,6 @@
 body {
   background-color: #00306e;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -8,9 +8,20 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
+#title-section {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  height: 7rem;
+}
+
+#title {
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+}
 
 #bg-main-container {
   background-color: #2a6aa9;
+  min-height: 100vh;
 }
 
 #bg-top-container {
@@ -30,40 +41,29 @@ body {
 }
 
 #bg-img-3 {
-  height: 7rem;
+  height: 4rem;
 }
 
 #bg-img-4 {
-  height: 8rem;
-}
-
-#bg-img-logo {
   height: 5rem;
 }
 
-#catalog-container {
-  background-color: antiquewhite;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  max-width: 520px;
+#bg-img-logo {
+  height: 4rem;
 }
 
-.btn {
+#carouselComponent {
+  max-width: 400px;
+  margin: 1rem;
+}
+
+#downloadBtn {
   background-color: #0ea399;
   padding: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.catalog-title {
-  color: white;
-  margin-bottom: 1rem;
-  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
-}
-
-.carousel {
-  max-width: 300px;
+  z-index: 1;
 }
 
 /*
