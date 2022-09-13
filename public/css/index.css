@@ -9,6 +9,30 @@ body {
   box-sizing: border-box;
 }
 
+#title-section {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 95%
+  );
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  height: 9rem;
+}
+
+#title {
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+  margin-top: -1rem;
+  white-space: pre-line;
+  text-align: center;
+}
+
+/* #subtitle {
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+  margin-top: 0.5rem;
+} */
+
 #bg-main-container {
   background-color: #2a6aa9;
   min-height: 100vh;
@@ -31,15 +55,15 @@ body {
 }
 
 #bg-img-3 {
-  height: 7rem;
+  height: 4rem;
 }
 
 #bg-img-4 {
-  height: 8rem;
+  height: 5rem;
 }
 
 #bg-img-logo {
-  height: 5rem;
+  height: 4rem;
 }
 
 #btn-container {

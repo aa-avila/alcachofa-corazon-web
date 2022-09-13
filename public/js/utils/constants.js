@@ -11,7 +11,7 @@ const fbUrls = {
 
 const routes = {
   HOME: '/index.html',
-  CATALOG: '/public/pages/catalog.html',
+  CATALOG_INDEX: '/public/pages/catalog/index.html',
   ABOUT: '/public/pages/about.html'
 };
 

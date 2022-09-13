@@ -8,7 +8,22 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
+
+.navbar {
+  /* background-color: #003e4d; */
+  background-color: #91386c;
+}
+
+.dropdown-menu.show {
+  background-color: #b14584;
+}
+
 #title-section {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(255, 255, 255, 0) 92%
+  );
   z-index: 1;
   position: absolute;
   top: 0px;
@@ -19,6 +34,11 @@ body {
   text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
 }
 
+#subtitle {
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+  margin-top: 0.5rem;
+}
+
 #bg-main-container {
   background-color: #2a6aa9;
   min-height: 100vh;
@@ -26,10 +46,22 @@ body {
 
 #bg-top-container {
   background-color: #2a6aa9;
+  margin-top: 20px;
 }
 
 #bg-bottom-container {
   background-color: #2a6aa9;
+}
+
+#footer-section {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 95%
+  );
+  z-index: 1;
+  position: absolute;
+  height: 5rem;
 }
 
 #bg-img-1 {
@@ -58,18 +90,10 @@ body {
 }
 
 #downloadBtn {
-  background-color: #0ea399;
+  background-color: #91386c;
   padding: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
 }
-
-/*
-original colors:
-#f9accf
-#8d143d
-#2a6aa9
-#399c96
-*/

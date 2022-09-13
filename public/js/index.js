@@ -33,7 +33,7 @@ const setupAnalytics = async () => {
 /************************ */
 
 btnCatalog.addEventListener('click', () => {
-  window.location.assign(routes.CATALOG);
+  window.location.assign(routes.CATALOG_INDEX);
 });
 
 btnWp.addEventListener('click', () => {
