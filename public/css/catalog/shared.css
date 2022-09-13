@@ -10,12 +10,15 @@ body {
 }
 
 .navbar {
-  /* background-color: #003e4d; */
   background-color: #91386c;
 }
 
 .dropdown-menu.show {
   background-color: #b14584;
+}
+
+.dropdown-item:hover {
+  background-color: #da6fad;
 }
 
 #title-section {
@@ -96,4 +99,15 @@ body {
   margin-bottom: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
+}
+
+#wpFloatBtn {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50px;
+  z-index: 100;
 }
