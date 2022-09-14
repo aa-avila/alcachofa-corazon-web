@@ -1,4 +1,6 @@
 const fbUrls = {
+  CATALOG_CATEGORIES:
+    'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/categories.JSON',
   CATALOG_IMG:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/img-pages.json',
 
@@ -12,6 +14,7 @@ const fbUrls = {
 const routes = {
   HOME: '/index.html',
   CATALOG_INDEX: '/public/pages/catalog/index.html',
+  CATALOG_CUENCOS: '/public/pages/catalog/cuencos.html',
   ABOUT: '/public/pages/about.html'
 };
 
