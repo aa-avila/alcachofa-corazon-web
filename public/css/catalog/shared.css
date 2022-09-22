@@ -1,5 +1,16 @@
+:root {
+  --bgBody: #00306e;
+  --bgMain: #2a6aa9;
+  --navbarMain: #91386c;
+  --navbarMenu: #b14584;
+  --navbarMenuItem: #da6fad;
+  --btnDwnBg: #91386c;
+  --btnDwnHov: #b33f83;
+  --spinner: #b14584;
+}
+
 body {
-  background-color: #00306e;
+  background-color: var(--bgBody);
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -10,15 +21,15 @@ body {
 }
 
 .navbar {
-  background-color: #91386c;
+  background-color: var(--navbarMain);
 }
 
 .dropdown-menu.show {
-  background-color: #b14584;
+  background-color: var(--navbarMenu);
 }
 
 .dropdown-item:hover {
-  background-color: #da6fad;
+  background-color: var(--navbarMenuItem);
 }
 
 #title-section {
@@ -44,23 +55,24 @@ body {
 }
 
 .arrow-btn-icon {
+  transition: 150ms;
   font-size: 2.5rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
 #bg-main-container {
-  background-color: #2a6aa9;
+  background-color: var(--bgMain);
   min-height: 100vh;
 }
 
 #bg-top-container {
-  background-color: #2a6aa9;
+  background-color: var(--bgMain);
   margin-top: 20px;
 }
 
 #bg-bottom-container {
-  background-color: #2a6aa9;
+  background-color: var(--bgMain);
 }
 
 #footer-section {
@@ -74,15 +86,13 @@ body {
   height: 5rem;
 }
 
-#bg-img-1 {
-  height: 7rem;
-}
-
+#bg-img-1,
 #bg-img-2 {
   height: 7rem;
 }
 
-#bg-img-3 {
+#bg-img-3,
+#bg-img-logo {
   height: 4rem;
 }
 
@@ -90,22 +100,27 @@ body {
   height: 5rem;
 }
 
-#bg-img-logo {
-  height: 4rem;
-}
-
 #carouselComponent {
   max-width: 400px;
   margin: 1rem;
 }
 
+.spinner-border {
+  color: var(--spinner);
+  height: 3rem;
+  width: 3rem;
+}
+
 #downloadBtn {
-  background-color: #91386c;
+  background-color: var(--btnDwnBg);
   padding: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
+}
+#downloadBtn:hover {
+  background-color: var(--btnDwnHov);
 }
 
 #wpFloatBtn {
@@ -117,4 +132,10 @@ body {
   right: 40px;
   border-radius: 50px;
   z-index: 100;
+}
+#wpFloatBtn:hover {
+  width: 70px;
+  height: 70px;
+  bottom: 35px;
+  right: 35px;
 }
