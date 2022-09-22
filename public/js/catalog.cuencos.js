@@ -1,4 +1,4 @@
-console.log('starting catalog.js');
+console.log('starting catalog.cuencos.js');
 import { logEvent, analytics } from './firebase/config.js';
 import { events } from './firebase/events.js';
 import { routes } from './utils/constants.js';
