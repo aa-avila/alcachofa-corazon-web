@@ -5,36 +5,15 @@ import { routes } from './utils/constants.js';
 import { getWebParams } from './utils/webParams.js';
 import { fetchGet } from './utils/fetchData.js';
 import { fbUrls } from './utils/constants.js';
+import { carousel } from './components/carousel.js';
+import { renderById } from './utils/renderById.js';
 
-const { CATALOG_IMG, CATALOG_PDF_TEST } = fbUrls;
+const { CATALOG_IMG_TEST, CATALOG_PDF_TEST } = fbUrls;
 const pdfDownloadBtn = document.getElementById('download-btn');
 
-const makeCarousel = async () => {
-  const catalogImgJson = await fetchGet(CATALOG_IMG);
-
-  const htmlFirstSlide = `
-    <div class="carousel-item active">
-      <img src="${catalogImgJson[1]}" class="d-block w-100" alt="...">
-    </div>`;
-
-  const makeSlide = (imgUrl) => {
-    const html = `
-    <div class="carousel-item">
-      <img src="${imgUrl}" class="d-block w-100" alt="...">
-    </div>`;
-    return html;
-  };
-
-  catalogImgJson.splice(0, 2);
-
-  let htmlSlides = '';
-
-  catalogImgJson.forEach((url) => {
-    htmlSlides = htmlSlides + ' ' + makeSlide(url);
-  });
-
-  document.getElementById('carousel-catalog').innerHTML =
-    htmlFirstSlide + htmlSlides;
+const createCarousel = async () => {
+  const htmlCarousel = await carousel(CATALOG_IMG_TEST);
+  renderById('carousel-catalog', htmlCarousel);
 };
 
 const setupDwnPdfButton = async () => {
@@ -61,7 +40,6 @@ const setupAnalytics = async () => {
 };
 
 /************************ */
-
-makeCarousel().catch((err) => console.log(err));
+createCarousel().catch((err) => console.log(err));
 setupDwnPdfButton().catch((err) => console.log(err));
 setupAnalytics().catch((err) => console.log(err));

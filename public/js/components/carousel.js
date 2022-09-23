@@ -1,30 +1,31 @@
 import { fetchGet } from '../utils/fetchData.js';
 
-const makeCarousel = async (imagesUrl) => {
-  const imagesJson = await fetchGet(imagesUrl);
-
-  const firstSlide = `
-      <div class="carousel-item active">
-        <img src="${imagesJson[1]}" class="d-block w-100" alt="...">
-      </div>`;
-
-  const makeSlide = (imgUrl) => {
-    const html = `
-      <div class="carousel-item">
-        <img src="${imgUrl}" class="d-block w-100" alt="...">
-      </div>`;
-    return html;
-  };
-
-  imagesJson.splice(0, 2);
-
-  // TODO: refactor para usar .map
-  let htmlSlides = '';
-  imagesJson.forEach((url) => {
-    htmlSlides = htmlSlides + ' ' + makeSlide(url);
-  });
-
-  return firstSlide + htmlSlides;
+const slideActive = (imgUrl) => {
+  const html = `
+    <div class="carousel-item active">
+      <img src="${imgUrl}" class="d-block w-100" alt="...">
+    </div>`;
+  return html;
 };
 
-export { makeCarousel };
+const slide = (imgUrl) => {
+  const html = `
+    <div class="carousel-item">
+      <img src="${imgUrl}" class="d-block w-100" alt="...">
+    </div>`;
+  return html;
+};
+
+const carousel = async (imagesUrl) => {
+  const imgUrls = await fetchGet(imagesUrl);
+
+  const firstSlide = slideActive(imgUrls[1]);
+
+  imgUrls.splice(0, 2);
+
+  const slides = imgUrls.map((url) => slide(url)).join('');
+
+  return firstSlide + slides;
+};
+
+export { carousel };

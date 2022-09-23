@@ -1,7 +1,7 @@
 const fbUrls = {
   CATALOG_CATEGORIES:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/categories.JSON',
-  CATALOG_IMG:
+  CATALOG_IMG_TEST:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/img-pages.json',
 
   CATALOG_PDF_TEST:
