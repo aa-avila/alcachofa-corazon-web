@@ -7,7 +7,7 @@ import { fetchGet } from './utils/fetchData.js';
 import { fbUrls } from './utils/constants.js';
 
 const { CATALOG_IMG, CATALOG_PDF_TEST } = fbUrls;
-const pdfDownloadBtn = document.getElementById('downloadBtn');
+const pdfDownloadBtn = document.getElementById('download-btn');
 
 const makeCarousel = async () => {
   const catalogImgJson = await fetchGet(CATALOG_IMG);

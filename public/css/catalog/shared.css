@@ -105,13 +105,13 @@ body {
   margin: 1rem;
 }
 
-.spinner-border {
+#spinner-catalog {
   color: var(--spinner);
   height: 3rem;
   width: 3rem;
 }
 
-#downloadBtn {
+#download-btn {
   background-color: var(--btnDwnBg);
   padding: 1rem;
   margin-top: 0.5rem;
@@ -119,11 +119,11 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 1;
 }
-#downloadBtn:hover {
+#download-btn:hover {
   background-color: var(--btnDwnHov);
 }
 
-#wpFloatBtn {
+#wp-float-btn {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: fixed;
   width: 60px;
@@ -133,7 +133,7 @@ body {
   border-radius: 50px;
   z-index: 100;
 }
-#wpFloatBtn:hover {
+#wp-float-btn:hover {
   width: 70px;
   height: 70px;
   bottom: 35px;
