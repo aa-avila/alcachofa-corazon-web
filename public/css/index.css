@@ -38,10 +38,10 @@ body {
   text-align: center;
 }
 
-/* #subtitle {
+#subtitle {
   text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
   margin-top: 0.5rem;
-} */
+}
 
 #bg-main-container {
   background-color: var(--bgMain);
