@@ -30,7 +30,7 @@ const setupAnalytics = async () => {
   }
 
   console.log('analytics enabled');
-  logEvent(analytics, events.CATALOG_VIEW, { timestamp: new Date() });
+  logEvent(analytics, events.CATALOG_CUENCOS_VIEW, { timestamp: new Date() });
 
   pdfDownloadBtn.addEventListener('click', () => {
     logEvent(analytics, events.CATALOG_BTN_DOWNLOAD_CLICKED, {
