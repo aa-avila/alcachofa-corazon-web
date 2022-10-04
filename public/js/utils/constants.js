@@ -1,6 +1,6 @@
 const fbUrls = {
   CATALOG_CATEGORIES:
-    'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/categories.JSON',
+    'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/categories.json',
   CATALOG_IMG_TEST:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/img-pages.json',
 
@@ -15,6 +15,9 @@ const routes = {
   HOME: '/index.html',
   CATALOG_INDEX: '/public/pages/catalog/index.html',
   CATALOG_CUENCOS: '/public/pages/catalog/cuencos.html',
+  CATALOG_MACETAS: '/public/pages/catalog/macetas.html',
+  CATALOG_TAZAS: '/public/pages/catalog/tazas.html',
+  CATALOG_VARIOS: '/public/pages/catalog/varios.html',
   ABOUT: '/public/pages/about.html'
 };
 
