@@ -2,24 +2,27 @@ console.log('starting catalog.index.js');
 import { logEvent, analytics } from './firebase/config.js';
 import { events } from './firebase/events.js';
 import { getWebParams } from './utils/webParams.js';
-import { routes } from './utils/constants.js';
+import { ROUTES } from './utils/constants.js';
 import { fetchGet } from './utils/fetchData.js';
-import { fbUrls } from './utils/constants.js';
+import { URLS } from './utils/constants.js';
 import { renderById } from './utils/renderById.js';
 import { cardCategory } from './components/cardCategory.js';
 
-const { CATALOG_CATEGORIES, CATALOG_PDF_TEST } = fbUrls;
+const { CATALOG_CATEGORIES, CATALOG_PDF_TEST } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
 
 const createCards = async () => {
-  let { cuencos, macetas, tazas, varios } = await fetchGet(CATALOG_CATEGORIES);
+  let { cuencos, tazas, teteras, macetas, varios } = await fetchGet(
+    CATALOG_CATEGORIES
+  );
 
-  cuencos.link = routes.CATALOG_CUENCOS;
-  macetas.link = routes.CATALOG_MACETAS;
-  tazas.link = routes.CATALOG_TAZAS;
-  varios.link = routes.CATALOG_VARIOS;
+  cuencos.link = ROUTES.CATALOG_CUENCOS;
+  tazas.link = ROUTES.CATALOG_TAZAS;
+  teteras.link = ROUTES.CATALOG_TETERAS;
+  macetas.link = ROUTES.CATALOG_MACETAS;
+  varios.link = ROUTES.CATALOG_VARIOS;
 
-  const categories = [cuencos, macetas, tazas, varios];
+  const categories = [cuencos, tazas, teteras, macetas, varios];
 
   const htmlCards = categories
     .map((item) => {

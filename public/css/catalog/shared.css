@@ -111,6 +111,10 @@ body {
   width: 3rem;
 }
 
+#dwn-pdf-icon {
+  margin-right: 0.5rem;
+}
+
 #download-btn {
   background-color: var(--btnDwnBg);
   padding: 1rem;

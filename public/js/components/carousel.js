@@ -17,11 +17,12 @@ const slide = (imgUrl) => {
 };
 
 const carousel = async (imagesUrl) => {
-  const imgUrls = await fetchGet(imagesUrl);
+  const imagesData = await fetchGet(imagesUrl);
+  const imgUrls = imagesData.data.images.map((item) => item.transform.w400);
 
-  const firstSlide = slideActive(imgUrls[1]);
+  const firstSlide = slideActive(imgUrls[0]);
 
-  imgUrls.splice(0, 2);
+  imgUrls.splice(0, 1);
 
   const slides = imgUrls.map((url) => slide(url)).join('');
 

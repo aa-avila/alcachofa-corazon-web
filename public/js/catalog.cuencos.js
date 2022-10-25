@@ -1,14 +1,14 @@
 console.log('starting catalog.cuencos.js');
 import { logEvent, analytics } from './firebase/config.js';
 import { events } from './firebase/events.js';
-import { routes } from './utils/constants.js';
+import { ROUTES } from './utils/constants.js';
 import { getWebParams } from './utils/webParams.js';
 import { fetchGet } from './utils/fetchData.js';
-import { fbUrls } from './utils/constants.js';
+import { URLS } from './utils/constants.js';
 import { carousel } from './components/carousel.js';
 import { renderById } from './utils/renderById.js';
 
-const { CATALOG_IMG_TEST, CATALOG_PDF_TEST } = fbUrls;
+const { CATALOG_IMG_TEST, CATALOG_PDF_TEST } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
 
 const createCarousel = async () => {

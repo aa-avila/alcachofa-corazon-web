@@ -1,7 +1,7 @@
 console.log('starting index.js');
 import { logEvent, analytics } from './firebase/config.js';
 import { events } from './firebase/events.js';
-import { routes, socialLinks } from './utils/constants.js';
+import { ROUTES, SOCIAL_LINKS } from './utils/constants.js';
 import { getWebParams } from './utils/webParams.js';
 
 const btnCatalog = document.getElementById('btn-catalog');
@@ -33,11 +33,11 @@ const setupAnalytics = async () => {
 /************************ */
 
 btnCatalog.addEventListener('click', () => {
-  window.location.assign(routes.CATALOG_INDEX);
+  window.location.assign(ROUTES.CATALOG_INDEX);
 });
 
 btnWp.addEventListener('click', () => {
-  window.location.assign(socialLinks.WHATSAPP);
+  window.location.assign(SOCIAL_LINKS.WHATSAPP);
 });
 
 setupAnalytics().catch((err) => console.log(err));
