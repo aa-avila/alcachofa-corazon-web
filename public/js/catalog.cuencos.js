@@ -1,24 +1,21 @@
 console.log('starting catalog.cuencos.js');
 import { logEvent, analytics } from './firebase/config.js';
 import { events } from './firebase/events.js';
-import { ROUTES } from './utils/constants.js';
 import { getWebParams } from './utils/webParams.js';
-import { fetchGet } from './utils/fetchData.js';
 import { URLS } from './utils/constants.js';
 import { carousel } from './components/carousel.js';
 import { renderById } from './utils/renderById.js';
 
-const { CATALOG_IMG_TEST, CATALOG_PDF_TEST } = URLS;
+const { CATALOG_IMG_CUENCOS, CATALOG_PDF_CUENCOS } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
 
 const createCarousel = async () => {
-  const htmlCarousel = await carousel(CATALOG_IMG_TEST);
+  const htmlCarousel = await carousel(CATALOG_IMG_CUENCOS);
   renderById('carousel-catalog', htmlCarousel);
 };
 
 const setupDwnPdfButton = async () => {
-  const catalogPdfUrl = await fetchGet(CATALOG_PDF_TEST);
-  pdfDownloadBtn.href = catalogPdfUrl;
+  pdfDownloadBtn.href = CATALOG_PDF_CUENCOS;
   pdfDownloadBtn.classList.remove('disabled');
 };
 

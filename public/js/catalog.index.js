@@ -8,21 +8,22 @@ import { URLS } from './utils/constants.js';
 import { renderById } from './utils/renderById.js';
 import { cardCategory } from './components/cardCategory.js';
 
-const { CATALOG_CATEGORIES, CATALOG_PDF_TEST } = URLS;
+const { CATALOG_CATEGORIES, CATALOG_PDF_FULL } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
 
 const createCards = async () => {
-  let { cuencos, tazas, teteras, macetas, varios } = await fetchGet(
+  let { cuencos, tazas, platos, teteras, macetas, varios } = await fetchGet(
     CATALOG_CATEGORIES
   );
 
   cuencos.link = ROUTES.CATALOG_CUENCOS;
   tazas.link = ROUTES.CATALOG_TAZAS;
+  platos.link = ROUTES.CATALOG_PLATOS;
   teteras.link = ROUTES.CATALOG_TETERAS;
   macetas.link = ROUTES.CATALOG_MACETAS;
   varios.link = ROUTES.CATALOG_VARIOS;
 
-  const categories = [cuencos, tazas, teteras, macetas, varios];
+  const categories = [cuencos, tazas, platos, teteras, macetas, varios];
 
   const htmlCards = categories
     .map((item) => {
@@ -34,8 +35,7 @@ const createCards = async () => {
 };
 
 const setupDwnPdfButton = async () => {
-  const catalogPdfUrl = await fetchGet(CATALOG_PDF_TEST);
-  pdfDownloadBtn.href = catalogPdfUrl;
+  pdfDownloadBtn.href = CATALOG_PDF_FULL;
   pdfDownloadBtn.classList.remove('disabled');
 };
 
