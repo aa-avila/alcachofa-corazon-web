@@ -5,19 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
+
+    <link rel="icon" type="ico" href="/public/icon/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
+    <script src="/public/js/index.js" type="module" defer></script>
     <title>Alcachofa Corazón | 404 Page Not Found</title>
 </head>
 
 <body>
-    <h1>Alcachofa Corazón</h1>
-    <br>
-    <h3>error 404 - page not found</h3>
-    <br>
-    <i>La página solicitada no existe :(</i>
-    <br>
-    <a href="/index.html">Volver</a>
-    <script type="module" src="src/script.js"></script>
+    <div id="bg-main-container"
+        class="container d-flex flex-column justify-content-between align-items-center h-100 p-0">
+        <div id="bg-top-container" class="container-fluid d-flex justify-content-between p-0">
+            <div>
+                <img id="bg-img-1" src="./public/img/bg-1.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-2" src="./public/img/bg-2.png" alt="">
+            </div>
+            <div id="title-section" class="container d-flex flex-column justify-content-center align-items-center">
+                <div id="title" class="text-white fs-1">Error 404
+                </div>
+                <div id="subtitle" class="text-white fs-3">La página solicitada no existe :(</div>
+            </div>
+        </div>
+
+        <div id="btn-container" class="container-fluid d-flex flex-column justify-content-center">
+            <a href="/index.html" class="btn text-white fs-4 "> Llevame a Home!</a>
+        </div>
+
+        <div id="bg-bottom-container" class="container-fluid d-flex justify-content-between align-items-end p-0">
+            <div>
+                <img id="bg-img-3" src="./public/img/bg-3.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-logo" src="./public/img/bg-logo.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-4" src="./public/img/bg-4.png" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

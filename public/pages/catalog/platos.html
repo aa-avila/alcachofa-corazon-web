@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="ico" href="/public/icon/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/public/css/catalog/shared.css">
+    <link rel="stylesheet" href="/public/css/catalog/cards.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
+    <script src="/public/js/catalog.platos.js" type="module" defer></script>
+    <title>Alcachofa Corazón | Catálogo - Platos</title>
+</head>
+
+<body>
+    <div id="bg-main-container"
+        class="container d-flex flex-column justify-content-between align-items-center h-100 p-0">
+
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/public/icon/favicon-32x32.png" alt="" width="32" height="28">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" id="home-navbar-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#"
+                                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Catálogo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/index.html">
+                                        Indice </a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/cuencos.html">
+                                        Cuencos y ensaladeras</a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/tazas.html">
+                                        Tazas, tazones y mates</a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/platos.html">
+                                        -> Platos y platitos</a></li>
+                                <li><a class="dropdown-item text-light"
+                                        href="/public/pages/catalog/teteras.html">Teteras</a></li>
+                                <li><a class="dropdown-item text-light"
+                                        href="/public/pages/catalog/macetas.html">Macetitas y floreros</a></li>
+                                <li><a class="dropdown-item text-light"
+                                        href="/public/pages/catalog/varios.html">Sahumadores, pipas y otras...</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="wp-navbar-link" href="https://wa.me/5493513092821"
+                                target="_blank">WhatsApp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="bg-top-container" class="container-fluid d-flex justify-content-between p-0">
+            <div>
+                <img id="bg-img-1" src="/public/img/bg-1.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-2" src="/public/img/bg-2.png" alt="">
+            </div>
+        </div>
+
+        <div id="title-section" class="container d-flex justify-content-around align-items-center">
+            <a id="back-btn-top" href="/public/pages/catalog/index.html" class="arrow-btn text-white">
+                <i class="bi bi-arrow-left-circle-fill arrow-btn-icon"></i>
+            </a>
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <div id="title" class="text-white fs-2">Catálogo</div>
+                <div id="subtitle" class="text-white fs-4">Platos y platitos</div>
+            </div>
+            <!-- chanchulla!-->
+            <a href="" class="arrow-btn invisible">
+                <i class="bi bi-arrow-left-circle-fill arrow-btn-icon"></i>
+            </a>
+            <!-- chanchulla!-->
+        </div>
+
+        <div class="d-flex flex-column align-items-center mx-auto">
+            <div id="carouselComponent" class="carousel slide" data-bs-ride="carousel">
+                <div id="carousel-catalog" class="carousel-inner">
+                    <div id="spinner-catalog" class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComponent"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselComponent"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <br>
+        </div>
+
+        <a id="download-btn" href="" target="_blank" class="btn text-white fs-5 disabled">
+            <i id="dwn-pdf-icon" class="bi bi-file-earmark-arrow-down-fill"></i>
+            Descargar PDF
+        </a>
+
+        <a id="wp-float-btn" href="https://wa.me/5493513092821" target="_blank">
+            <img src="/public/img/wp.svg" alt="">
+        </a>
+
+        <div id="bg-bottom-container" class="container-fluid d-flex justify-content-between align-items-end p-0">
+            <div id="footer-section" class="container d-flex align-items-center">
+            </div>
+            <div>
+                <img id="bg-img-3" src="/public/img/bg-3.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-logo" src="/public/img/bg-logo.png" alt="">
+            </div>
+            <div>
+                <img id="bg-img-4" src="/public/img/bg-4.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

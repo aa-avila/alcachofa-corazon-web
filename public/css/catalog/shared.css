@@ -1,0 +1,148 @@
+:root {
+  --bgBody: #00306e;
+  --bgMain: #2a6aa9;
+  --navbarMain: #91386c;
+  --navbarMenu: #b14584;
+  --navbarMenuItem: #da6fad;
+  --btnDwnBg: #91386c;
+  --btnDwnHov: #b33f83;
+  --spinner: #b14584;
+}
+
+body {
+  background-color: var(--bgBody);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: var(--navbarMain);
+}
+
+.dropdown-menu.show {
+  background-color: var(--navbarMenu);
+}
+
+.dropdown-item:hover {
+  background-color: var(--navbarMenuItem);
+}
+
+#title-section {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(255, 255, 255, 0) 92%
+  );
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  min-height: 7rem;
+  padding-top: 10px;
+}
+
+#title {
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+#subtitle {
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+  text-align: center;
+}
+
+.arrow-btn-icon {
+  transition: 150ms;
+  font-size: 2.5rem;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
+}
+
+#bg-main-container {
+  background-color: var(--bgMain);
+  min-height: 100vh;
+}
+
+#bg-top-container {
+  background-color: var(--bgMain);
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}
+
+#bg-bottom-container {
+  background-color: var(--bgMain);
+}
+
+#footer-section {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 95%
+  );
+  z-index: 1;
+  position: absolute;
+  height: 5rem;
+}
+
+#bg-img-1,
+#bg-img-2 {
+  height: 7rem;
+}
+
+#bg-img-3,
+#bg-img-logo {
+  height: 4rem;
+}
+
+#bg-img-4 {
+  height: 5rem;
+}
+
+#carouselComponent {
+  max-width: 400px;
+  margin: 1rem;
+}
+
+#spinner-catalog {
+  color: var(--spinner);
+  height: 3rem;
+  width: 3rem;
+}
+
+#dwn-pdf-icon {
+  margin-right: 0.5rem;
+}
+
+#download-btn {
+  background-color: var(--btnDwnBg);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1;
+}
+#download-btn:hover {
+  background-color: var(--btnDwnHov);
+}
+
+#wp-float-btn {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50px;
+  z-index: 100;
+}
+#wp-float-btn:hover {
+  width: 70px;
+  height: 70px;
+  bottom: 35px;
+  right: 35px;
+}
