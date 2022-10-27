@@ -41,24 +41,26 @@ body {
   z-index: 1;
   position: absolute;
   top: 40px;
-  height: 7rem;
+  min-height: 7rem;
   padding-top: 10px;
 }
 
 #title {
   text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+  padding-top: 0.5rem;
+  text-align: center;
 }
 
 #subtitle {
   text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
-  margin-left: 0.5rem;
+  text-align: center;
 }
 
 .arrow-btn-icon {
   transition: 150ms;
   font-size: 2.5rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  /* margin-left: 2rem;
+  margin-right: 2rem; */
 }
 
 #bg-main-container {
@@ -69,6 +71,7 @@ body {
 #bg-top-container {
   background-color: var(--bgMain);
   margin-top: 20px;
+  margin-bottom: 1rem;
 }
 
 #bg-bottom-container {

@@ -18,7 +18,7 @@ const slide = (imgUrl) => {
 
 const carousel = async (imagesUrl) => {
   const imagesData = await fetchGet(imagesUrl);
-  const imgUrls = imagesData.data.images.map((item) => item.transform.w400);
+  const imgUrls = imagesData.data.images.map((item) => item.transform.w540);
 
   const firstSlide = slideActive(imgUrls[0]);
 

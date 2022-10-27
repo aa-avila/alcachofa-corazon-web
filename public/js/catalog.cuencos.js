@@ -8,6 +8,11 @@ import { renderById } from './utils/renderById.js';
 
 const { CATALOG_IMG_CUENCOS, CATALOG_PDF_CUENCOS } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
+const wpFloatBtn = document.getElementById('wp-float-btn');
+const backBtnTop = document.getElementById('back-btn-top');
+const navbarBrand = document.getElementsByClassName('navbar-brand');
+const homeNavbarLink = document.getElementById('home-navbar-link');
+const wpNavbarLink = document.getElementById('wp-navbar-link');
 
 const createCarousel = async () => {
   const htmlCarousel = await carousel(CATALOG_IMG_CUENCOS);
@@ -30,7 +35,46 @@ const setupAnalytics = async () => {
   logEvent(analytics, events.CATALOG_CUENCOS_VIEW, { timestamp: new Date() });
 
   pdfDownloadBtn.addEventListener('click', () => {
-    logEvent(analytics, events.CATALOG_BTN_DOWNLOAD_CLICKED, {
+    logEvent(analytics, events.CATALOG_CUENCOS_BTN_DOWNLOAD_CLICKED, {
+      timestamp: new Date()
+    });
+    logEvent(analytics, events.DOWNLOAD_CATALOG_PARTIAL, {
+      timestamp: new Date()
+    });
+  });
+
+  wpFloatBtn.addEventListener('click', () => {
+    logEvent(analytics, events.CATALOG_CUENCOS_BTN_WP_CLICKED, {
+      timestamp: new Date()
+    });
+    logEvent(analytics, events.GO_TO_WHATSAPP, {
+      timestamp: new Date()
+    });
+  });
+
+  backBtnTop.addEventListener('click', () => {
+    logEvent(analytics, events.CATALOG_CUENCOS_BTN_BACK_TOP_CLICKED, {
+      timestamp: new Date()
+    });
+  });
+
+  navbarBrand[0].addEventListener('click', () => {
+    logEvent(analytics, events.CATALOG_CUENCOS_NAVBRAND_CLICKED, {
+      timestamp: new Date()
+    });
+  });
+
+  homeNavbarLink.addEventListener('click', () => {
+    logEvent(analytics, events.CATALOG_CUENCOS_NAVLINK_HOME_CLICKED, {
+      timestamp: new Date()
+    });
+  });
+
+  wpNavbarLink.addEventListener('click', () => {
+    logEvent(analytics, events.CATALOG_CUENCOS_NAVLINK_WP_CLICKED, {
+      timestamp: new Date()
+    });
+    logEvent(analytics, events.GO_TO_WHATSAPP, {
       timestamp: new Date()
     });
   });

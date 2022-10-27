@@ -15,8 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
         defer></script>
-    <script src="/public/js/catalog.index.js" type="module" defer></script>
-    <title>Alcachofa Corazón | Catálogo - Índice </title>
+    <script src="/public/js/catalog.teteras.js" type="module" defer></script>
+    <title>Alcachofa Corazón | Catálogo - Teteras</title>
 </head>
 
 <body>
@@ -45,16 +45,15 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item text-light" href="/public/pages/catalog/index.html">
-                                        -> Indice </a></li>
-                                <li><a class="dropdown-item text-light"
-                                        href="/public/pages/catalog/cuencos.html">Cuencos y ensaladeras</a></li>
-                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/tazas.html">Tazas,
-                                        tazones y
-                                        mates</a></li>
-                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/platos.html">Platos
-                                        y platitos</a></li>
-                                <li><a class="dropdown-item text-light"
-                                        href="/public/pages/catalog/teteras.html">Teteras</a></li>
+                                        Indice </a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/cuencos.html">
+                                        Cuencos y ensaladeras</a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/tazas.html">
+                                        Tazas, tazones y mates</a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/platos.html">
+                                        Platos y platitos</a></li>
+                                <li><a class="dropdown-item text-light" href="/public/pages/catalog/teteras.html">
+                                        -> Teteras</a></li>
                                 <li><a class="dropdown-item text-light"
                                         href="/public/pages/catalog/macetas.html">Macetitas y floreros</a></li>
                                 <li><a class="dropdown-item text-light"
@@ -80,12 +79,12 @@
         </div>
 
         <div id="title-section" class="container d-flex justify-content-around align-items-center">
-            <a id="back-btn-top" href="/index.html" class="arrow-btn text-white">
+            <a id="back-btn-top" href="/public/pages/catalog/index.html" class="arrow-btn text-white">
                 <i class="bi bi-arrow-left-circle-fill arrow-btn-icon"></i>
             </a>
             <div class="container d-flex flex-column justify-content-center align-items-center">
                 <div id="title" class="text-white fs-2">Catálogo</div>
-                <div id="subtitle" class="text-white fs-4">Índice</div>
+                <div id="subtitle" class="text-white fs-4">Teteras</div>
             </div>
             <!-- chanchulla!-->
             <a href="" class="arrow-btn invisible">
@@ -94,16 +93,30 @@
             <!-- chanchulla!-->
         </div>
 
-
-        <div id="cards-container" class="row row-cols-1 row-cols-md-3 g-0 p-4">
-            <div id="spinner-catalog" class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+        <div class="d-flex flex-column align-items-center mx-auto">
+            <div id="carouselComponent" class="carousel slide" data-bs-ride="carousel">
+                <div id="carousel-catalog" class="carousel-inner">
+                    <div id="spinner-catalog" class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComponent"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselComponent"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+            <br>
         </div>
 
         <a id="download-btn" href="" target="_blank" class="btn text-white fs-5 disabled">
             <i id="dwn-pdf-icon" class="bi bi-file-earmark-arrow-down-fill"></i>
-            Catálogo PDF Completo
+            Descargar PDF
         </a>
 
         <a id="wp-float-btn" href="https://wa.me/5493513092821" target="_blank">
@@ -112,7 +125,6 @@
 
         <div id="bg-bottom-container" class="container-fluid d-flex justify-content-between align-items-end p-0">
             <div id="footer-section" class="container d-flex align-items-center">
-                <!-- <a href="/index.html" class="text-white fs-4">Volver</a> -->
             </div>
             <div>
                 <img id="bg-img-3" src="/public/img/bg-3.png" alt="">
@@ -125,7 +137,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
