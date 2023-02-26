@@ -9,6 +9,7 @@ import { getImgHost } from './utils/getImgHost.js';
 
 const imgHost = await getImgHost();
 
+
 const { CATALOG_IMG_MACETAS, CATALOG_PDF_MACETAS } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
 const wpFloatBtn = document.getElementById('wp-float-btn');
