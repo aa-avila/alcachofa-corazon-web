@@ -5,6 +5,9 @@ import { getWebParams } from './utils/webParams.js';
 import { URLS } from './utils/constants.js';
 import { carousel } from './components/carousel.js';
 import { renderById } from './utils/renderById.js';
+import { getImgHost } from './utils/getImgHost.js';
+
+const imgHost = await getImgHost();
 
 const { CATALOG_IMG_TAZAS, CATALOG_PDF_TAZAS } = URLS;
 const pdfDownloadBtn = document.getElementById('download-btn');
@@ -15,7 +18,7 @@ const homeNavbarLink = document.getElementById('home-navbar-link');
 const wpNavbarLink = document.getElementById('wp-navbar-link');
 
 const createCarousel = async () => {
-  const htmlCarousel = await carousel(CATALOG_IMG_TAZAS);
+  const htmlCarousel = await carousel(`${imgHost}${CATALOG_IMG_TAZAS}`);
   renderById('carousel-catalog', htmlCarousel);
 };
 
