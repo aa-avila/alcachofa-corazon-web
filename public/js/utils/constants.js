@@ -1,3 +1,8 @@
+const HOSTS = {
+  IMAGES_PRIMARY: 'https://alcahofa-images.up.railway.app',
+  IMAGES_SECONDARY: 'https://alcahofa-images.onrender.com'
+};
+
 const URLS = {
   WEB_PARAMS:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/web-page/params.json',
@@ -5,23 +10,19 @@ const URLS = {
   CATALOG_CATEGORIES:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/categories.json',
 
-  CATALOG_IMG_TEST:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalogo-prueba-img&limit=100',
+  CATALOG_IMG_TEST: '/images?folder=alcachofa/catalogo-prueba-img&limit=100',
   CATALOG_PDF_TEST:
     'https://alcachofa-corazon-default-rtdb.firebaseio.com/catalog/pdf/test.json',
 
   CATALOG_IMG_CUENCOS:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalog-img/CUENCOS-Y-BOWLS&limit=500',
+    '/images?folder=alcachofa/catalog-img/CUENCOS-Y-BOWLS&limit=500',
   CATALOG_IMG_TAZAS:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalog-img/TAZAS-Y-MATES&limit=500',
-  CATALOG_IMG_PLATOS:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalog-img/PLATOS&limit=500',
-  CATALOG_IMG_TETERAS:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalog-img/TETERAS&limit=500',
+    '/images?folder=alcachofa/catalog-img/TAZAS-Y-MATES&limit=500',
+  CATALOG_IMG_PLATOS: '/images?folder=alcachofa/catalog-img/PLATOS&limit=500',
+  CATALOG_IMG_TETERAS: '/images?folder=alcachofa/catalog-img/TETERAS&limit=500',
   CATALOG_IMG_MACETAS:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalog-img/MACETITAS-Y-FLOREROS&limit=500',
-  CATALOG_IMG_VARIOS:
-    'https://alcahofa-images.up.railway.app/images?folder=alcachofa/catalog-img/VARIOS&limit=500',
+    '/images?folder=alcachofa/catalog-img/MACETITAS-Y-FLOREROS&limit=500',
+  CATALOG_IMG_VARIOS: '/images?folder=alcachofa/catalog-img/VARIOS&limit=500',
 
   CATALOG_PDF_CUENCOS:
     'https://firebasestorage.googleapis.com/v0/b/alcachofa-corazon.appspot.com/o/catalog%2Fpdf%2FCATALOGO_CUENCOS-Y-BOWLS.pdf?alt=media&token=46f753b1-cc27-44e3-a716-e954646abbcf',
@@ -58,4 +59,4 @@ const SOCIAL_LINKS = {
   EMAIL: 'alcachofa.corazon@gmail.com'
 };
 
-export { URLS, ROUTES, SOCIAL_LINKS };
+export { HOSTS, URLS, ROUTES, SOCIAL_LINKS };
