@@ -1,6 +1,8 @@
 const HOSTS = {
   IMAGES_PRIMARY: 'https://alcahofa-images.onrender.com',
   IMAGES_SECONDARY: 'https://alcahofa-images.up.railway.app',
+  IMAGES_PRIMARY: 'https://alcahofa-images.up.railway.app',
+  IMAGES_SECONDARY: 'https://alcahofa-images.onrender.com'
 };
 
 const URLS = {

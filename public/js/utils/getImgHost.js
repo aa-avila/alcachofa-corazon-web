@@ -10,3 +10,4 @@ export const getImgHost = async () => HOSTS.IMAGES_PRIMARY;
 //   }
 //   return HOSTS.IMAGES_SECONDARY;
 // };
+
