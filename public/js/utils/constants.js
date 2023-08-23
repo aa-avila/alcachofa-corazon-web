@@ -1,4 +1,6 @@
 const HOSTS = {
+  IMAGES_PRIMARY: 'https://alcahofa-images.onrender.com',
+  IMAGES_SECONDARY: 'https://alcahofa-images.up.railway.app',
   IMAGES_PRIMARY: 'https://alcahofa-images.up.railway.app',
   IMAGES_SECONDARY: 'https://alcahofa-images.onrender.com'
 };
@@ -37,7 +39,7 @@ const URLS = {
   CATALOG_PDF_VARIOS:
     'https://firebasestorage.googleapis.com/v0/b/alcachofa-corazon.appspot.com/o/catalog%2Fpdf%2FCATALOGO_VARIOS.pdf?alt=media&token=e80aaed1-32f4-4e3a-90c0-421e5b47bd97',
   CATALOG_PDF_FULL:
-    'https://firebasestorage.googleapis.com/v0/b/alcachofa-corazon.appspot.com/o/catalog%2Fpdf%2FCATALOGO_COMPLETO.pdf?alt=media&token=4916552e-4c0e-4ef1-813b-c04963a15529'
+    'https://firebasestorage.googleapis.com/v0/b/alcachofa-corazon.appspot.com/o/catalog%2Fpdf%2FCATALOGO_COMPLETO.pdf?alt=media&token=4916552e-4c0e-4ef1-813b-c04963a15529',
 };
 
 const ROUTES = {
@@ -50,13 +52,13 @@ const ROUTES = {
   CATALOG_PLATOS: '/public/pages/catalog/platos.html',
   CATALOG_TETERAS: '/public/pages/catalog/teteras.html',
   CATALOG_MACETAS: '/public/pages/catalog/macetas.html',
-  CATALOG_VARIOS: '/public/pages/catalog/varios.html'
+  CATALOG_VARIOS: '/public/pages/catalog/varios.html',
 };
 
 const SOCIAL_LINKS = {
   WHATSAPP: 'https://wa.me/5493513092821',
   INSTAGRAM: 'https://www.instagram.com/alcachofa.corazon/',
-  EMAIL: 'alcachofa.corazon@gmail.com'
+  EMAIL: 'alcachofa.corazon@gmail.com',
 };
 
 export { HOSTS, URLS, ROUTES, SOCIAL_LINKS };
